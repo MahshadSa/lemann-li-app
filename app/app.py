@@ -395,23 +395,46 @@ else:
     st.metric("Global LI", gli)
 
     # SAVE RESULT
-    st.markdown("### Save result")
-    if st.button("💾 Save current result"):
-        if not patient_id:
-            st.error("Please enter a Patient ID (left sidebar).")
-        elif patient_id.lower() in st.session_state.id_set:
-            st.error("This Patient ID already exists. Use a different ID.")
-        else:
-            st.session_state.results.append({
-                "ID": patient_id,
-                "LI_upper": organ_scores.get("upper", 0.0),
-                "LI_small_bowel": organ_scores.get("small_bowel", 0.0),
-                "LI_colon_rectum": organ_scores.get("colon_rectum", 0.0),
-                "LI_anus": organ_scores.get("anus", 0.0),
-                "Global_LI": gli,
-            })
-            st.session_state.id_set.add(patient_id.lower())
-            st.success(f"Saved results for ID: {patient_id}")
+    # ---------------- SAVED RESULTS / CSV ----------------
+st.subheader("Saved results")
+from pathlib import Path
+CSV_PATH = Path("lemann_index_results.csv")
+
+if st.session_state.results:
+    res_df = pd.DataFrame(st.session_state.results)
+    st.dataframe(res_df, use_container_width=True, hide_index=True)
+
+    # Download directly (client-side)
+    csv_bytes = res_df.to_csv(index=False).encode("utf-8")
+    st.download_button("⬇️ Download CSV", data=csv_bytes, file_name="lemann_index_results.csv", mime="text/csv")
+
+    # Server-side save / delete controls
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        if st.button("💾 Save CSV (server)"):
+            res_df.to_csv(CSV_PATH, index=False, encoding="utf-8")
+            st.success(f"Saved to {CSV_PATH.resolve()}")
+    with c2:
+        if st.button("🗑️ Delete CSV (server)"):
+            if CSV_PATH.exists():
+                CSV_PATH.unlink()
+                st.success("Server CSV deleted.")
+            else:
+                st.info("No server CSV to delete.")
+    with c3:
+        if st.button("🧽 Clear saved results (memory)"):
+            st.session_state.results = []
+            st.session_state.id_set = set()
+            st.success("Cleared in-memory saved results.")
+
+    # Show server file status
+    if CSV_PATH.exists():
+        st.caption(f"Server CSV: ✅ {CSV_PATH.resolve()}")
+    else:
+        st.caption("Server CSV: ❌ none")
+else:
+    st.info("No saved results yet.")
+
 
 # DOWNLOAD CSV
 
