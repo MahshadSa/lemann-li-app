@@ -394,8 +394,25 @@ else:
     gli = global_li(organ_scores)
     st.metric("Global LI", gli)
 
+st.markdown("### Save this result")
+if st.button("💾 Save current result"):
+    if not patient_id:
+        st.error("Please enter a Patient ID in the sidebar first.")
+    elif patient_id.lower() in st.session_state.id_set:
+        st.error("This Patient ID already exists. Use a new ID.")
+    else:
+        st.session_state.results.append({
+            "ID": patient_id,
+            "LI_upper": organ_scores.get("upper", 0.0),
+            "LI_small_bowel": organ_scores.get("small_bowel", 0.0),
+            "LI_colon_rectum": organ_scores.get("colon_rectum", 0.0),
+            "LI_anus": organ_scores.get("anus", 0.0),
+            "Global_LI": gli,
+        })
+        st.session_state.id_set.add(patient_id.lower())
+        st.success(f"Saved results for ID: {patient_id}")
+
     # SAVE RESULT
-    # ---------------- SAVED RESULTS / CSV ----------------
 st.subheader("Saved results")
 from pathlib import Path
 CSV_PATH = Path("lemann_index_results.csv")
@@ -435,22 +452,6 @@ if st.session_state.results:
 else:
     st.info("No saved results yet.")
 
-
-# DOWNLOAD CSV
-
-st.subheader("Saved results")
-if st.session_state.results:
-    res_df = pd.DataFrame(st.session_state.results)
-    st.dataframe(res_df, use_container_width=True, hide_index=True)
-    csv = res_df.to_csv(index=False).encode("utf-8")
-    st.download_button(
-        "⬇️ Download CSV",
-        data=csv,
-        file_name="lemann_index_results.csv",
-        mime="text/csv",
-    )
-else:
-    st.info("No saved results yet.")
 
 # REFERENCES
 with st.expander("Reference (original index)"):
