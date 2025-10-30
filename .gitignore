@@ -1,0 +1,16 @@
+﻿# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.DS_Store
+
+
+# Envs
+.venv/
+env/
+venv/
+
+
+# Streamlit
+.streamlit/secrets.toml
