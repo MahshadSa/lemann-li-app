@@ -1,0 +1,38 @@
+﻿cff-version: 1.2.0
+message: If you use this software, please cite it using the metadata below.
+type: software
+title: "Lémann Index (Updated) — Streamlit Calculator"
+abstract: >
+  Research/educational-use tool implementing the updated Organ and Global Lémann
+  Index (Pariente et al., Gastroenterology 2021). Provides a simple UI to enter
+  segment-level findings and export computed scores. Not for clinical decisions.
+authors:
+  - family-names: Sarikhani
+    given-names: Mahshad
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    LinkedIn:"https://www.linkedin.com/in/mahshad-sarikhani-md-297b9a26b/"  
+repository-code: "https://github.com/MahshadSa/lemann-li-app"
+url: "https://github.com/MahshadSa/lemann-li-app"
+version: "v0.1.0"
+date-released: "2025-11-03"                           
+license: MIT
+keywords:
+  - Lémann Index
+  - Inflammatory Bowel Disease
+  - Ulcerative Colitis
+  - Crohn's disease
+  - MRE
+  - quantitative MRI
+  - Streamlit
+preferred-citation:
+  type: software
+  title: "Lémann Index (Updated) — Streamlit Calculator (v0.1.0)"
+  authors:
+    - family-names: Sa
+      given-names: Mahshad
+      orcid: "https://orcid.org/0000-0002-0475-3064"
+  year: 2025
+  notes: "DOI will appear here after Zenodo release."
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.xxxxxxx"                   
