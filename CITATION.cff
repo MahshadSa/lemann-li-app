@@ -9,7 +9,7 @@ abstract: >
 authors:
   - family-names: Sarikhani
     given-names: Mahshad
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0000-0002-0475-3064"
     LinkedIn:"https://www.linkedin.com/in/mahshad-sarikhani-md-297b9a26b/"  
 repository-code: "https://github.com/MahshadSa/lemann-li-app"
 url: "https://github.com/MahshadSa/lemann-li-app"
@@ -28,11 +28,11 @@ preferred-citation:
   type: software
   title: "Lémann Index (Updated) — Streamlit Calculator (v0.1.0)"
   authors:
-    - family-names: Sa
+    - family-names: Sarikhani
       given-names: Mahshad
       orcid: "https://orcid.org/0000-0002-0475-3064"
   year: 2025
-  notes: "DOI will appear here after Zenodo release."
+  doi: https://doi.org/10.5281/zenodo.17513800
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.xxxxxxx"                   
+    value: "10.5281/zenodo.17513800"                   

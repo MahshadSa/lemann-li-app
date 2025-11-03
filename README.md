@@ -35,15 +35,11 @@ streamlit run app/app.py
 * Dependencies are **pinned** in `requirements.txt`. A fully locked snapshot can be saved via `pip freeze > requirements.lock` and attached to the release; the Zenodo archive preserves the exact release (code + README + demo assets).
 
 ## How to cite
+> Sarikhani M. Lémann Index (Updated) — Streamlit Calculator (v0.1.0). 2025.  
+> DOI: **[10.5281/zenodo.1234567](https://doi.org/10.5281/zenodo.17513800)**
 
-If you use this tool in research, please cite:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.17513800)
 
-> Sarikhani M. *Lémann Index (Updated) — Streamlit Calculator (v0.1.0).* 2025.
-> DOI: **[10.5281/zenodo.xxxxxxx](https://doi.org/10.5281/zenodo.xxxxxxx)**.
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
-
-*Replace the DOI above after publishing the GitHub Release with Zenodo enabled.*
 
 ## Versioning
 
