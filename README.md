@@ -24,7 +24,7 @@ Clone this repository, install dependencies, and launch locally:
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run app/app.py
 ```
 
 ## Reproducibility
