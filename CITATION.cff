@@ -10,11 +10,11 @@ authors:
   - family-names: Sarikhani
     given-names: Mahshad
     orcid: "https://orcid.org/0000-0002-0475-3064"
-    LinkedIn:"https://www.linkedin.com/in/mahshad-sarikhani-md-297b9a26b/"  
+    LinkedIn: "https://www.linkedin.com/in/mahshad-sarikhani-md-297b9a26b/"  
 repository-code: "https://github.com/MahshadSa/lemann-li-app"
 url: "https://github.com/MahshadSa/lemann-li-app"
-version: "v0.1.0"
-date-released: "2025-11-03"                           
+version: "v0.1.2"
+date-released: "2025-12-22"                           
 license: MIT
 keywords:
   - Lémann Index
@@ -26,7 +26,7 @@ keywords:
   - Streamlit
 preferred-citation:
   type: software
-  title: "Lémann Index (Updated) — Streamlit Calculator (v0.1.0)"
+  title: "Lémann Index (Updated) — Streamlit Calculator (v0.1.2)"
   authors:
     - family-names: Sarikhani
       given-names: Mahshad
