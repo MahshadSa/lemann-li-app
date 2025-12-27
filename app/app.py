@@ -5,7 +5,7 @@ import pandas as pd
 from typing import Dict, Any, List
 
 st.set_page_config(page_title="Lémann Index (updated)", layout="wide")
-st.title("Lémann Index (updated) – prototype calculator")
+st.title("Lémann Index (updated) calculator")
 st.caption(
     "Research/educational use only – NOT for clinical decisions. "
     "Implements the updated Organ and Global Lémann Index from Pariente et al., Gastroenterology 2021."
