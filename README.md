@@ -36,9 +36,9 @@ streamlit run app/app.py
 
 ## How to cite
 > Sarikhani M. Lémann Index (Updated) — Streamlit Calculator (v0.1.0). 2025.  
-> DOI: **[10.5281/zenodo.1234567](https://doi.org/10.5281/zenodo.17514287)**
+> DOI: **[10.5281/zenodo.17514287](https://doi.org/10.5281/zenodo.17514287)**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.17514287)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17514287.svg)](https://doi.org/10.5281/zenodo.17514287)
 
 
 ## Versioning
